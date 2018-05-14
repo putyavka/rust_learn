@@ -18,9 +18,8 @@ detect_indent_width=false
 indent_mode=2
 
 [project]
-name=minigrep
-base_path=/home/putyavka/rust/rust_learn/minigrep
-description=
+name=closures
+base_path=/home/putyavka/rust/rust_learn/closures/
 
 [long line marker]
 long_line_behaviour=1
@@ -28,5 +27,4 @@ long_line_column=72
 
 [files]
 current_page=0
-FILE_NAME_0=117;Rust;0;EUTF-8;1;1;0;%2Fhome%2Fputyavka%2Frust%2Frust_learn%2Fminigrep%2Fsrc%2Fmain.rs;0;4
-FILE_NAME_1=522;Rust;0;EUTF-8;1;1;0;%2Fhome%2Fputyavka%2Frust%2Frust_learn%2Fminigrep%2Fsrc%2Flib.rs;0;4
+FILE_NAME_0=1008;Rust;0;EUTF-8;1;1;0;%2Fhome%2Fputyavka%2Frust%2Frust_learn%2Fclosures%2Fsrc%2Fmain.rs;0;4
