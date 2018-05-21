@@ -19,7 +19,9 @@ indent_mode=2
 
 [project]
 name=closures
-base_path=/home/putyavka/rust/rust_learn/closures/
+base_path=closures/
+description=
+file_patterns=*.rs;
 
 [long line marker]
 long_line_behaviour=1
@@ -27,4 +29,4 @@ long_line_column=72
 
 [files]
 current_page=0
-FILE_NAME_0=1008;Rust;0;EUTF-8;1;1;0;%2Fhome%2Fputyavka%2Frust%2Frust_learn%2Fclosures%2Fsrc%2Fmain.rs;0;4
+FILE_NAME_0=237;Rust;0;EUTF-8;1;1;0;%2Fhome%2Fputyavka%2Frust%2Frust_learn%2Fclosures%2Fsrc%2Fmain.rs;0;4
