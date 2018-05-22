@@ -1,21 +1,22 @@
-use std::rc::Rc;
-use std::cell::RefCell;
-
-#[derive(Debug)]
-struct Node {
-  value: i32,
-  children: RefCell<Vec<Rc<Node>>>,
-}
+use std::sync::{ Mutex, Arc };
+use std::thread;
 
 fn main() {
-  let leaf = Rc::new(Node {
-    value: 3,
-    children: RefCell::new(vec![]),
-  });
-  let branch = Rc::new(Node {
-    value: 5,
-    children: RefCell::new(vec![Rc::clone(&leaf)]),
-  });
-  println!("leaf {:?}", *leaf);
-  println!("branch {:?}", *branch);
+    let counter = Arc::new(Mutex::new(0));
+    let mut handles = vec![];
+    
+    for _ in 0..10 {
+        let counter = Arc::clone(&counter);
+        let handle = thread::spawn(move || {
+            let mut c = counter.lock().unwrap();
+            *c += 1;
+        });
+        handles.push(handle);
+    }
+    
+    for h in handles {
+        h.join().unwrap();
+    }
+    
+    println!("Result: {}", *counter.lock().unwrap());
 }
